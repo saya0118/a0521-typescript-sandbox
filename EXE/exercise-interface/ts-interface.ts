@@ -7,7 +7,7 @@
 // • Create an interface and implement it on a class
 // • Differentiate type aliases from interfaces
 
-const Exercise2 = () => {
+const ExerciseTwo = () => {
     // ======== Exercise 2.1 ========
     // Instructions:
     // • Create an interface `CartItem` and replace the param's type with it
@@ -50,27 +50,17 @@ const Exercise2 = () => {
     //   `coords` property of type `Coords`.
     // • Fix whatever is wrong with `tampa`
   
-    //--------------------------------------------------------------------
-    //--------------------------------------------------------------------
-    //--------------------------------------------------------------------
-    //--------------------Please do not edit from here--------------------
+    
     // [do not edit] (pretend this is coming from external `foo.d.ts` lib)
     interface City {
       name: string
     }
-    //-----------------------[/do not edit]-------------------------------
-    //--------------------------------------------------------------------
-    //--------------------------------------------------------------------
-    //--------------------------------------------------------------------
-  
+    // [/do not edit]
+   
     interface Coords {
       latitude: number;
       longitude: number;
     }
-  
-    // interface Place extends City{
-    //   coords: Coords
-    // }
   
     interface City{
       coords: Coords
@@ -107,7 +97,29 @@ const Exercise2 = () => {
       `${getCityInfo(montreal)} \n\n ${getCityInfo(tampa)}`
     )
   
+  // ======== Exercise 2.4 ========
+  //   The purpose of this exercise is simply to illustrate a use of `readonly`
+  //   No solution needed
+  
+    interface UserSchema {
+      readonly id: number
+      name: string
+    }
+  
+    class User implements UserSchema {
+      constructor(public name: string, readonly id: number) {}
+    }
+  
+    const user = new User('Dog', 1)
+  
+    console.log(user.id) // readable
+  
+    user.name = 'Harold' // writable
+    user.id = 5 // not writable
+  
+    console.log(`User:`, user)
   }
   
-  Exercise2()
+  ExerciseTwo()
+  
   
