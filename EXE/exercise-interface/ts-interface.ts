@@ -82,9 +82,6 @@ const ExerciseTwo = () => {
       name: 'Tampa',
     }
   
-    // (string | number) // union
-    // (string & number) //intersection
-  
     function getCityInfo(city: City) {
       const coords = `(${city.coords.latitude.toFixed(
         3
