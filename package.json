@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node exercise-basic/ts-basic.js",
-    "dev":"ts-node exercise-basic/ts-basic.ts"
+    "start": "node exercise-basic/ts-basic.js",
+    "dev": "ts-node exercise-basic/ts-basic.ts",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
 }

@@ -81,6 +81,7 @@ const ExerciseTwo = () => {
       },
       name: 'Tampa',
     }
+
   
     function getCityInfo(city: City) {
       const coords = `(${city.coords.latitude.toFixed(
@@ -112,7 +113,7 @@ const ExerciseTwo = () => {
     console.log(user.id) // readable
   
     user.name = 'Harold' // writable
-    user.id = 5 // not writable
+    // user.id = 5 // not writable
   
     console.log(`User:`, user)
   }

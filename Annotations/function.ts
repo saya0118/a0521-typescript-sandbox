@@ -8,7 +8,7 @@ console.log(add(2,3));
 // ====================================================
 const logger = (message:string):void => {
     console.log(message)
-    return message + "!!!!"
+    // return message + "!!!!"
 }
 
 logger("HELLO THERE!!")
